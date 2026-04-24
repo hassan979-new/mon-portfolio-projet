@@ -1,4 +1,3 @@
-import Home from "@/pages/Home";
 import { HelmetProvider } from "react-helmet-async";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./app/router";
