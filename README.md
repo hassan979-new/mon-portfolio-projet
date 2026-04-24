@@ -1,73 +1,103 @@
-# React + TypeScript + Vite
+# React – TP Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📖 Description
+Ce projet est une **application React (portfolio de démonstration)** réalisée dans le cadre d’un TP.  
 
-Currently, two official plugins are available:
+Le projet met en pratique :
+- La création de composants React réutilisables  
+- La gestion des routes avec React Router  
+- La manipulation de données locales (mock data)  
+- La création d’interfaces modernes avec Tailwind CSS  
+- L’organisation d’un projet frontend structuré  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+## 📂 Structure du projet
+```
+mon-portfolio/
+├── src/
+│ ├── app/
+│ ├── components/
+│ ├── pages/
+│ ├── data/
+│ ├── layout/
+│ ├── App.tsx
+│ └── main.tsx
+└── public/
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
+## ⚙️ Fonctionnalités
 
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs["recommended-typescript"],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+### 🏠 Home
+- Page d’accueil avec présentation générale
+- Navigation vers les différentes sections
+
+### 📁 Projects
+- Affichage des projets sous forme de cartes
+- Description et liens (demo / code)
+
+### 🎓 Education
+- Timeline des formations
+- Affichage des diplômes et établissements
+
+### 📜 Certifications
+- Liste des certifications
+- Fonction de **filtrage / recherche**
+
+### 📬 Contact
+- Formulaire de contact (nom, email, message)
+- Validation basique côté frontend
+
+---
+
+## 🎨 Interface
+- Design moderne inspiré des interfaces minimalistes
+- Utilisation de Tailwind CSS
+- Layout responsive (mobile / desktop)
+- Mode sombre basé sur les classes Tailwind
+
+---
+
+## 🚀 Déploiement (Vercel)
+
+Le projet est déployé sur **Vercel** :
+
+🔗 https://mon-portfolio-projet.vercel.app/
+
+---
+
+## 🛠️ Technologies utilisées
+
+- React
+- TypeScript
+- Vite
+- React Router
+- Tailwind CSS
+- React Helmet Async
+
+---
+
+## 🎥 Démonstration:
+
+https://github.com/user-attachments/assets/c3eed4bb-0099-426b-918f-0021562356b4
+
+
+## 💡 Concepts pratiqués
+
+- Architecture modulaire React
+- Routing multi-pages
+- State management avec hooks
+- Composition de composants
+- Styling moderne avec Tailwind
+- Organisation d’un projet frontend complet
+
+---
+
+## 🧑‍💻 Auteur
+
+👤 **Agouram Hassan**  
+⚛️ Projet React – TP Portfolio 
+🎓 ENS Marrakech – Département Informatique  
+📅 24 April 2026
