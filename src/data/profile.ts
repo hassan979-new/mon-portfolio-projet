@@ -1,6 +1,6 @@
 export const profile = {
   name: "Agouram Hassan",
-  role: "Ingénieur Logiciel / Chercheur",
+  role: "Elève",
   location: "Ait Ourir, Maroc",
   email: "h.agouram3818@uca.ac.ma",
   socials: [
