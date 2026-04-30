@@ -11,22 +11,34 @@ export default function CertificationsPage() {
         [c.title, c.issuer, ...(c.tags ?? []), ...(c.skills ?? [])]
           .join(" ")
           .toLowerCase()
-          .includes(q.toLowerCase()),
+          .includes(q.toLowerCase())
       )
       .sort((a, b) => b.issueDate.localeCompare(a.issueDate));
   }, [q]);
 
   return (
     <section className="grid gap-6">
-      <div className="flex items-center justify-between gap-4">
-        <h2 className="text-2xl font-semibold">Certifications</h2>
+
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+        <h2 className="text-2xl font-semibold">
+          Certifications
+        </h2>
 
         <input
           placeholder="Filtrer (ex: AWS, Kubernetes)"
           value={q}
           onChange={(e) => setQ(e.target.value)}
-          className="border rounded-xl px-3 py-2 w-72"
           aria-label="Filtrer les certifications"
+          className="
+            w-full md:w-72
+            px-3 py-2 rounded-xl
+            border border-border
+            bg-background text-foreground
+            placeholder:text-muted-foreground
+            focus:outline-none focus:ring-2 focus:ring-primary
+            transition
+          "
         />
       </div>
 
@@ -35,6 +47,7 @@ export default function CertificationsPage() {
           <CertificationCard key={c.title + c.issueDate} c={c} />
         ))}
       </div>
+
     </section>
   );
 }

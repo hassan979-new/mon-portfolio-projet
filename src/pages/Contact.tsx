@@ -13,11 +13,21 @@ export default function Contact() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // simulation envoi
-    alert("Message envoyé ✔");
+    const response = await fetch("https://formspree.io/f/xjglvaqz", {
+      method: "POST",
+      headers: {"Content-Type": "application/json", Accept: "application/json"},
+      body: JSON.stringify(form),
+    });
+
+    if (response.ok) {
+      alert("Message envoyé ✔");
+      setForm({ name: "", email: "", message: "" });
+    }else{
+      alert("Erreur lors de l'envoi");
+    }
 
     setForm({
       name: "",
@@ -32,7 +42,7 @@ export default function Contact() {
 
       <form
         onSubmit={handleSubmit}
-        className="grid gap-4 border rounded-2xl p-6"
+        className="grid gap-4 border border-border rounded-2xl p-6 bg-background shadow-sm"
       >
         <input
           type="text"
@@ -40,7 +50,12 @@ export default function Contact() {
           placeholder="Nom"
           value={form.name}
           onChange={handleChange}
-          className="border rounded-xl px-3 py-2"
+          className="px-3 py-2 rounded-xl
+            border border-border
+            bg-background text-foreground
+            placeholder:text-muted-foreground
+            focus:outline-none focus:ring-2 focus:ring-primary
+            transition"
           required
         />
 
@@ -50,7 +65,12 @@ export default function Contact() {
           placeholder="Email"
           value={form.email}
           onChange={handleChange}
-          className="border rounded-xl px-3 py-2"
+          className="px-3 py-2 rounded-xl
+            border border-border
+            bg-background text-foreground
+            placeholder:text-muted-foreground
+            focus:outline-none focus:ring-2 focus:ring-primary
+            transition"
           required
         />
 
@@ -59,13 +79,22 @@ export default function Contact() {
           placeholder="Message"
           value={form.message}
           onChange={handleChange}
-          className="border rounded-xl px-3 py-2 min-h-[120px]"
+          className="px-3 py-2 rounded-xl
+            border border-border
+            bg-background text-foreground
+            placeholder:text-muted-foreground
+            min-h-[120px]
+            focus:outline-none focus:ring-2 focus:ring-primary
+            transition"
           required
         />
 
         <button
           type="submit"
-          className="bg-black text-white rounded-xl py-2 hover:opacity-80"
+          className="bg-primary text-primary-foreground
+            rounded-xl py-2
+            hover:opacity-90
+            transition"
         >
           Envoyer
         </button>
