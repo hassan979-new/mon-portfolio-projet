@@ -81,7 +81,10 @@ Le projet est déployé sur **Vercel** :
 
 ## 🎥 Démonstration:
 
-https://github.com/user-attachments/assets/c3eed4bb-0099-426b-918f-0021562356b4
+
+
+https://github.com/user-attachments/assets/fcf4f844-9859-4065-a579-758eb29cbaac
+
 
 
 ## 💡 Concepts pratiqués
