@@ -9,19 +9,22 @@ export default function RootLayout() {
         : "text-foreground hover:bg-muted"
     }`;
 
-    
-
   return (
     <div className="min-h-dvh flex flex-col bg-background text-foreground">
-      
-      <header className="border-b bg-gray-100 backdrop-blur border-gray-400 dark:bg-gray-900 dark:border-gray-700">
+
+      <header className="sticky top-0 z-50 border-b bg-gray-100/90 backdrop-blur border-gray-300 dark:bg-gray-900/90 dark:border-gray-700">
         <nav className="mx-auto max-w-6xl flex flex-col md:flex-row gap-2 md:gap-3 items-center justify-between p-4">
-          
-          <NavLink to="/" className="font-bold text-lg">
-            MonPortfolio
+
+          {/* Logo / name */}
+          <NavLink
+            to="/"
+            className="font-bold text-base tracking-tight hover:text-violet-500 transition"
+          >
+            Agouram Hassan
           </NavLink>
 
-          <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+          {/* Nav links */}
+          <div className="flex flex-wrap justify-center items-center gap-1 md:gap-1.5">
             <NavLink to="/projects" className={linkClass}>Projets</NavLink>
             <NavLink to="/experience" className={linkClass}>Parcours</NavLink>
             <NavLink to="/education" className={linkClass}>Formations</NavLink>
@@ -33,13 +36,13 @@ export default function RootLayout() {
         </nav>
       </header>
 
-      <main className="flex-1 mx-auto max-w-6xl p-6">
+      <main className="flex-1 mx-auto w-full max-w-6xl p-6">
         <Outlet />
       </main>
 
-      <footer className="bg-gray-100 border-t mt-10">
-        <div className="mx-auto max-w-6xl py-6 text-center text-xs md:text-sm text-gray-600">
-          © {new Date().getFullYear()} • Agouram Hassan
+      <footer className="border-t bg-gray-100 dark:bg-gray-900 dark:border-gray-700">
+        <div className="mx-auto max-w-6xl py-6 text-center text-xs md:text-sm text-gray-500 dark:text-gray-400">
+          © {new Date().getFullYear()} · Agouram Hassan · Tous droits réservés
         </div>
       </footer>
     </div>
