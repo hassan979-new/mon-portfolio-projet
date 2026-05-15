@@ -142,7 +142,7 @@ export default function Home() {
         aria-label="Photo de profil de Agouram Hassan"
       >
         <img
-          src={`${import.meta.env.BASE_URL}user.png`}
+          src={`${import.meta.env.BASE_URL}moi.png`}
           alt="Agouram Hassan"
           className="w-full h-full object-cover hover:scale-105 transition duration-300"
         />
