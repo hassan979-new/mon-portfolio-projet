@@ -18,7 +18,7 @@ export const certifications: Certification[] = [
   {
     title: "Fondamentaux et Concepts Avancés de la Programmation Java",
     issuer: "MLIAEdu",
-    issueDate: "2024-03",
+    issueDate: "2025-12",
     credentialUrl: BASE_URL + "6-3a8f0816-b443-4e06-a66d-401cb718848b-489202",
     skills: ["Programmation Java", "POO"],
     tags: ["Java"],
