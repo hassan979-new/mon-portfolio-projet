@@ -10,16 +10,16 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Gestion de Cantine S6",
-    period: "2026",
+    title: "Gestion de Cantine",
+    period: "2026 S6",
     tags: ["Node.js", "React", "Vite", "Java", "Android", "MySQL"],
     summary:
       "Système complet de gestion de cantine scolaire. Application web React pour les admins et agents (gestion des plats du jour, tableau de bord avec statistiques, suivi et mise à jour des commandes). Application Android pour les étudiants (consultation du menu, commande avec quantité, suivi et annulation des commandes).",
     repo: "https://github.com/hassan979-new/Gestion-de-cantine.git",
   },
   {
-    title: "Gestion de Bibliothèque S5",
-    period: "2025",
+    title: "Gestion de Bibliothèque",
+    period: "2025 S5",
     tags: ["Java", "MySQL", "Swing"],
     summary:
       "Application desktop de gestion de bibliothèque développée en Java avec une interface graphique Swing et une base de données MySQL.",
